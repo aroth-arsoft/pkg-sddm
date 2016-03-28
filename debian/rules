@@ -19,10 +19,17 @@ endif
 %:
 	dh $@ ${WITH_SYSTEMD} --parallel
 
+override_dh_clean:
+	dh_clean
+	-rm data/themes/elarun/images/system_switch_user.png
+	-rm data/themes/elarun/images/user_icon.png
+
 override_dh_strip:
 	dh_strip --dbg-package=sddm-dbg
 
 override_dh_auto_configure:
+	cp debian/system_switch_user.png data/themes/elarun/images/system_switch_user.png
+	cp debian/user_icon.png data/themes/elarun/images/user_icon.png
 	dh_auto_configure -- ${SDDM_CMAKE_ARGS}
 
 override_dh_systemd_start:
