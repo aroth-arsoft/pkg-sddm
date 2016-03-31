@@ -1,3 +1,9 @@
+sddm (0.13.0-1.2~aroth~ppa1) xenial; urgency=medium
+
+  * elarun: use same focus magic as in breeze
+
+ -- Andreas Roth <aroth@arsoft-online.com>  Thu, 31 Mar 2016 07:04:05 +0200
+
 sddm (0.13.0-1.1~aroth~ppa1) xenial; urgency=medium
 
   * fixed missing icon for elarun
